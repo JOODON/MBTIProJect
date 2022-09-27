@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
-import javax.management.relation.Role;
+
 import javax.sql.DataSource;
 import java.util.Collection;
 import java.util.Collections;
@@ -21,7 +21,7 @@ public class MemberDao {
     private NamedParameterJdbcTemplate jdbc;
 
     private SimpleJdbcInsert insertAction;
-    private RowMapper<Role> rowMapper = BeanPropertyRowMapper.newInstance(Role.class);
+    private RowMapper<MemberDto> rowMapper = BeanPropertyRowMapper.newInstance(MemberDto.class);
 
 
     public MemberDao(DataSource dataSource){
@@ -31,9 +31,10 @@ public class MemberDao {
                 .usingGeneratedKeyColumns("id");
     }
 
-    public List<Role> selectAll(){
-        return jdbc.query(SELECT_ALL, Collections.<String, Object>emptyMap(),rowMapper);
+    public List<MemberDto> selectAll(){
+        return jdbc.query(SELECT_ALL,Collections.<String, Object>emptyMap(),rowMapper);
     }
+
     public int insert(MemberDto dto){
         SqlParameterSource params=new BeanPropertySqlParameterSource(dto);
         return insertAction.executeAndReturnKey(params).intValue();
