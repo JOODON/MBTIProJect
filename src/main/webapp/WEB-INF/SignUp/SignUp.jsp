@@ -1,5 +1,11 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: qhdud
+  Date: 2022-09-27
+  Time: 오후 10:57
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <!doctype html>
 <html lang="kr">
 <head>
@@ -14,117 +20,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-
-    <style>
-        *{margin: 0; padding: 0;}
-
-        body {
-            font-family: 'Jua', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #3a3939;
-            /*animation-name: move;*/
-            /*animation-duration: 1.5s;*/
-        }
-
-        /*@keyframes move {*/
-        /*    from {*/
-        /*        padding-top: 650px;*/
-        /*    } to {*/
-        /*        padding-top: 0;*/
-        /*          }*/
-        /*}*/
-
-        section {
-            box-shadow: 5px 5px 10px #a0a6bb;
-            background-color: #e9eff6;
-            border-radius: 10px;
-            padding: 25px;
-        }
-
-        .textBox {width: 260px; position: relative;}
-
-        #border {
-            border-radius: 10px;
-            background-color: #ffffff;
-            padding: 25px;
-            text-align: center;
-            width: 300px;
-        }
-
-        h1 {margin-bottom: 15px;}
-
-        .textBox input {
-            font-family: 'Jua', sans-serif;
-            margin: 15px;
-            padding: 10px 5px 5px ;
-            border:none;
-            border-bottom: 1px solid #a0a6bb;
-            width: 100%;
-            outline: none;
-        }
-
-        .textBox label {
-            position: absolute; left: 20px; top: 20px;
-            transition: all .3s ease;
-        }
-
-        .textBox label.warning {
-            animation: warning .3s ease;
-            animation-iteration-count: 3;
-        }
-
-        .textBox input:focus + label,
-        .textBox input:valid + label {
-            font-size: 12px;
-            top: 1px;
-            color: #7c8093;
-        }
-
-        @keyframes warning {
-            0% {transform: translateX(-8px);}
-            25% {transform: translateX(8px);}
-            50% {transform: translateX(-8px);}
-            75% {transform: translateX(8px);}
-        }
-
-        .gender {
-            text-align: left;
-            margin-left: 15px;
-            font-size: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        .but {
-            margin-top: 30px;
-            height: 40px;
-        }
-
-        #signBut {
-            width: 270px;
-            height: 40px;
-            margin-bottom: 3px;
-            border: none;
-            background-color: #a0a6bb;
-            font-family: 'Jua', sans-serif;
-            font-size: 18px;
-            color: #fff;
-            box-shadow: 2px 2px 5px #a0a6bb;
-            border-radius: 5px;
-            transition-duration: .05s;
-        }
-
-        #signBut:hover{background-color: #7c8093}
-
-        #signBut:active{
-            margin-left: 1.5px;
-            margin-top: 1.5px;
-            box-shadow: none;
-        }
-    </style>
 
     <title>회원가입</title>
 </head>
