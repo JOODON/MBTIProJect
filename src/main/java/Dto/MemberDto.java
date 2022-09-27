@@ -2,7 +2,7 @@ package Dto;
 
 import java.util.Date;
 
-//jdbc:mysql://localhost:3307/MBTIDB 나의 데이터베이스
+
 
 public class MemberDto {
     private int id;
