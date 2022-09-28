@@ -180,8 +180,8 @@
             </div>
 
             <div class="gender">
-                <input type="radio" id="m" name="memberGender" checked><label for="m">남자 &nbsp;</label>
-                <input type="radio" id="f" name="memberGender"><label for="f">여자</label>
+                <input type="radio" id="m" name="memberGender" value="man" checked><label for="m">남자 &nbsp;</label>
+                <input type="radio" id="f" name="memberGender" value="woman"><label for="f">여자</label>
             </div>
 
             <div class="but">
