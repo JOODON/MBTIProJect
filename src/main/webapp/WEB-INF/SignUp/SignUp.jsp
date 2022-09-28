@@ -143,7 +143,7 @@
 <section>
     <div id="border">
         <h1>회원가입</h1>
-        <form id="Join_form" method="post">
+        <form action="Join" method="post">
             <div class="textBox">
                 <input type="text" id="memberName" name="memberName" size="100" required
                        oninvalid="this.setCustomValidity('이름을 입력해주세요.')" oninput="this.setCustomValidity('')">
@@ -151,7 +151,7 @@
             </div>
 
             <div class="textBox">
-                <input type="text" id="id" name="id" size="100" required
+                <input type="text" id="id" name="memberid" size="100" required
                        oninvalid="this.setCustomValidity('아이디를 입력해주세요.')" oninput="this.setCustomValidity('')">
                 <label for="id" id="id-text">아이디</label>
             </div>
