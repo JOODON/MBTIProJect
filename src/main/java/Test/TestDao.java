@@ -16,7 +16,7 @@ public class TestDao {
         MemberDao memberDao=ac.getBean(MemberDao.class);
 
         MemberDto memberDto=new MemberDto();
-
+        memberDto.setMemberName("주동호");
         memberDto.setMemberid("admin");
         memberDto.setMemberPassword("admin");
         memberDto.setPhoneNumber("010-7761-8482");

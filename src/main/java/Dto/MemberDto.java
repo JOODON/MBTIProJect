@@ -6,7 +6,6 @@ import java.util.Date;
 
 public class MemberDto {
     private int id;
-
     private String memberName;
     private String memberid;
     private String memberPassword;
@@ -15,15 +14,20 @@ public class MemberDto {
     private String memberGender;
     private Date regDate;
 
-    public String getMemberName(String memberName) {
-        return this.memberName;
-    }
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getMemberName() {
+        return memberName;
+    }
+
+    public void setMemberName(String memberName) {
+        this.memberName = memberName;
     }
 
     public String getMemberid() {
@@ -36,10 +40,6 @@ public class MemberDto {
 
     public String getMemberPassword() {
         return memberPassword;
-    }
-
-    public void setMemberName(String memberName) {
-        this.memberName = memberName;
     }
 
     public void setMemberPassword(String memberPassword) {

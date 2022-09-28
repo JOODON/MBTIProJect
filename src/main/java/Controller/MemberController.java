@@ -34,7 +34,7 @@ public class MemberController {
 
     MemberDto memberDto=new MemberDto();
 
-    memberDto.getMemberName(memberName);
+    memberDto.setMemberName(memberName);
     memberDto.setMemberid(memberid);
     memberDto.setMemberPassword(memberPassword);
     memberDto.setPhoneNumber(PhoneNumber);
