@@ -15,7 +15,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/SignUp.css">
+    <link rel="stylesheet" type="text/css" href="SignUp.css">
     <%--파일경로 찾는거 나중에 해야댐--%>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,8 +180,8 @@
             </div>
 
             <div class="gender">
-                <input type="radio" id="m" name="memberGender" checked><label for="m">남자 &nbsp;</label>
-                <input type="radio" id="f" name="memberGender"><label for="f">여자</label>
+                <input type="radio" id="m" name="memberGender" value="man" checked><label for="m">남자 &nbsp;</label>
+                <input type="radio" id="f" name="memberGender" value="woman"><label for="f">여자</label>
             </div>
 
             <div class="but">
