@@ -30,7 +30,7 @@ public class WebMvcContextConfiguration implements WebMvcConfigurer {
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/SignUp/");
+        resolver.setPrefix("/WEB-INF/Views/");
         //나중에는 메인페이지 경로가 들어가주어야됨
         resolver.setSuffix(".jsp");
         return resolver;

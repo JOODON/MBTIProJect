@@ -44,6 +44,6 @@ public class MemberController {
 
     int id=memberDao.insert(memberDto);
 
-    return "SingUp";
+    return "login";
   }
 }
