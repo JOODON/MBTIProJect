@@ -12,8 +12,8 @@ import java.util.Date;
 public class TestDao {
     public static void main(String[] args) {
         ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
-        MemberService memberService = ac.getBean(MemberService.class);
 
+        MemberService memberService =ac.getBean(MemberService.class);
 
         MemberDto memberDto = new MemberDto();
 
@@ -23,7 +23,6 @@ public class TestDao {
         memberDto.setPhoneNumber("010-7761-8482");
         memberDto.setMemberEmail("launcher37@naver.com");
         memberDto.setMemberGender("남");
-
 
         MemberDto result=memberService.addUser(memberDto);
     }

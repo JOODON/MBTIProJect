@@ -28,7 +28,7 @@ public class MemberController {
                      @RequestParam(name = "memberEmail",required = true)String memberEmail,
                      @RequestParam(name = "memberGender",required = true)String memberGender, ModelMap modelMap){
 
-    ApplicationContext ac=new AnnotationConfigApplicationContext(ApplicationConfig.class);
+    ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
     MemberService memberService = ac.getBean(MemberService.class);
 
@@ -42,7 +42,7 @@ public class MemberController {
     memberDto.setMemberGender(memberGender);
 
 
-    MemberDto result = memberService.addUser(memberDto);
+    MemberDto result=memberService.addUser(memberDto);
 
     return "login";
   }
