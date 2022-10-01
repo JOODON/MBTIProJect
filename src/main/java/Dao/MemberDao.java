@@ -35,8 +35,11 @@ public class MemberDao {
         return jdbc.query(SELECT_ALL,Collections.<String, Object>emptyMap(),rowMapper);
     }
 
+
     public int insert(MemberDto dto){
         SqlParameterSource params=new BeanPropertySqlParameterSource(dto);
         return insertAction.executeAndReturnKey(params).intValue();
     }
+
+
 }
