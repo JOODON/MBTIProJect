@@ -175,7 +175,8 @@
             </div>
 
             <div class="textBox">
-                <input type="email" id="memberEmail" name="memberEmail" size="100" required>
+                <input type="text" id="memberEmail" name="memberEmail" size="100" required
+                       oninvalid="this.setCustomValidity('이메일을 입력해주세요.')" oninput="this.setCustomValidity('')">
                 <label for="memberEmail" id="mail-text">이메일</label>
             </div>
 

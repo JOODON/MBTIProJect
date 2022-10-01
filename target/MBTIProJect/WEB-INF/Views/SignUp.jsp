@@ -175,13 +175,23 @@
             </div>
 
             <div class="textBox">
+<<<<<<< HEAD
                 <input type="email" id="memberEmail" name="memberEmail" size="100" required>
+=======
+                <input type="text" id="memberEmail" name="memberEmail" size="100" required
+                       oninvalid="this.setCustomValidity('이메일을 입력해주세요.')" oninput="this.setCustomValidity('')">
+>>>>>>> 661d42e719c73904d5bf044049bab91999ee8088
                 <label for="memberEmail" id="mail-text">이메일</label>
             </div>
 
             <div class="gender">
+<<<<<<< HEAD
                 <input type="radio" id="m" name="memberGender" checked><label for="m">남자 &nbsp;</label>
                 <input type="radio" id="f" name="memberGender"><label for="f">여자</label>
+=======
+                <input type="radio" id="m" name="memberGender" value="man" checked><label for="m">남자 &nbsp;</label>
+                <input type="radio" id="f" name="memberGender" value="woman"><label for="f">여자</label>
+>>>>>>> 661d42e719c73904d5bf044049bab91999ee8088
             </div>
 
             <div class="but">
