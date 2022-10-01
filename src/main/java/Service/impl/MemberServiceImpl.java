@@ -13,10 +13,7 @@ public class MemberServiceImpl implements MemberService{
     @Autowired
     MemberDao memberDao;
 
-
-
     @Override
-    @Transactional(readOnly = false)
     public MemberDto addUser(MemberDto memberDto) {
         memberDto.setRegDate(new Date());
         int id=memberDao.insert(memberDto);
