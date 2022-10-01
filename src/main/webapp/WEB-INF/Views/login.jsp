@@ -12,5 +12,11 @@
 </head>
 <body>
 로그인 페이지
+<form method="post" action="loginAction.jsp">
+    <input type="text">
+    <input type="password">
+    <input type="submit">
+</form>
+
 </body>
 </html>

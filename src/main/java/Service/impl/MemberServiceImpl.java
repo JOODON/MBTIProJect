@@ -4,13 +4,23 @@ import Dao.MemberDao;
 import Dto.MemberDto;
 import Service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-public class MemberServiceImpl implements MemberService {
+import java.util.Date;
+@Service
+public class MemberServiceImpl implements MemberService{
     @Autowired
     MemberDao memberDao;
 
+
+
     @Override
-    public void memberJoin(MemberDto member) throws Exception {
-        memberDao.insert(member);
+    public MemberDto addUser(MemberDto memberDto) {
+        memberDto.setRegDate(new Date());
+        int id=memberDao.insert(memberDto);
+        memberDto.setId(id);
+
+        return memberDto;
     }
 }

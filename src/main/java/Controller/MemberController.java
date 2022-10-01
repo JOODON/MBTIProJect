@@ -30,19 +30,19 @@ public class MemberController {
 
     ApplicationContext ac=new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
-    MemberDao memberDao=ac.getBean(MemberDao.class);
+    MemberService memberService = ac.getBean(MemberService.class);
 
-    MemberDto memberDto=new MemberDto();
+    MemberDto memberDto = new MemberDto();
 
-    memberDto.setMemberName(memberName);
     memberDto.setMemberid(memberid);
+    memberDto.setMemberName(memberName);
     memberDto.setMemberPassword(memberPassword);
     memberDto.setPhoneNumber(PhoneNumber);
     memberDto.setMemberEmail(memberEmail);
     memberDto.setMemberGender(memberGender);
-    memberDto.setRegDate(new Date());
 
-    int id=memberDao.insert(memberDto);
+
+    MemberDto result = memberService.addUser(memberDto);
 
     return "login";
   }
