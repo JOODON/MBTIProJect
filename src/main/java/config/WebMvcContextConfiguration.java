@@ -25,7 +25,7 @@ public class WebMvcContextConfiguration implements WebMvcConfigurer {
     @Override
     public void addViewControllers(final ViewControllerRegistry registry) {
         System.out.println("addViewControllers가 호출됩니다. ");
-        registry.addViewController("/").setViewName("SignUp");
+        registry.addViewController("/").setViewName("login");
     }
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {
