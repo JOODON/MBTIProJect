@@ -85,16 +85,9 @@ public class MemberController {
 
       if (memberid.equals(id) && memberPassword.equals(pw)){
         session.setAttribute("memberid",memberDto.getMemberid());
-
-        out.println("<script>alert('로그인에 성공하셨습니다.')</script>");
-
         return "main";
       }
       else {
-        out.println("<script>");
-        out.println("alert('비밀번호가 틀립니다.')");
-        out.println("history.back()");
-        out.println("</script>");
         return "login";
       }
     }

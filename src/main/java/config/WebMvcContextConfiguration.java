@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class WebMvcContextConfiguration implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/assets/**").addResourceLocations("classpath:/META-INF/resources/webjars/").setCachePeriod(31556926);
+        registry.addResourceHandler("/assets/**").addResourceLocations("classpath:/resources/").setCachePeriod(31556926);
         registry.addResourceHandler("/css/**").addResourceLocations("/css/").setCachePeriod(31556926);
         registry.addResourceHandler("/img/**").addResourceLocations("/img/").setCachePeriod(31556926);
         registry.addResourceHandler("/js/**").addResourceLocations("/js/").setCachePeriod(31556926);
@@ -25,7 +25,7 @@ public class WebMvcContextConfiguration implements WebMvcConfigurer {
     @Override
     public void addViewControllers(final ViewControllerRegistry registry) {
         System.out.println("addViewControllers가 호출됩니다. ");
-        registry.addViewController("/").setViewName("login");
+        registry.addViewController("/").setViewName("SignUp");
     }
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {

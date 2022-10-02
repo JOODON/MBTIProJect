@@ -6,8 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
+<mvc:resources mapping="/resources/**" location="/resources/" />
+</beans>
 <!doctype html>
 <html lang="kr">
 <head>
@@ -15,8 +17,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="SignUp.css">
-    <%--파일경로 찾는거 나중에 해야댐--%>
+    <link rel="stylesheet" href="/SignUp.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
@@ -25,116 +26,116 @@
 
 
     <title>회원가입</title>
-    <style>
-        *{margin: 0; padding: 0;}
+<%--    <style>--%>
+<%--        *{margin: 0; padding: 0;}--%>
 
-        body {
-            font-family: 'Jua', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #3a3939;
-            /*animation-name: move;*/
-            /*animation-duration: 1.5s;*/
-        }
+<%--        body {--%>
+<%--            font-family: 'Jua', sans-serif;--%>
+<%--            display: flex;--%>
+<%--            justify-content: center;--%>
+<%--            align-items: center;--%>
+<%--            height: 100vh;--%>
+<%--            color: #3a3939;--%>
+<%--            /*animation-name: move;*/--%>
+<%--            /*animation-duration: 1.5s;*/--%>
+<%--        }--%>
 
-        /*@keyframes move {*/
-        /*    from {*/
-        /*        padding-top: 650px;*/
-        /*    } to {*/
-        /*        padding-top: 0;*/
-        /*          }*/
-        /*}*/
+<%--        /*@keyframes move {*/--%>
+<%--        /*    from {*/--%>
+<%--        /*        padding-top: 650px;*/--%>
+<%--        /*    } to {*/--%>
+<%--        /*        padding-top: 0;*/--%>
+<%--        /*          }*/--%>
+<%--        /*}*/--%>
 
-        section {
-            box-shadow: 5px 5px 10px #a0a6bb;
-            background-color: #e9eff6;
-            border-radius: 10px;
-            padding: 25px;
-        }
+<%--        section {--%>
+<%--            box-shadow: 5px 5px 10px #a0a6bb;--%>
+<%--            background-color: #e9eff6;--%>
+<%--            border-radius: 10px;--%>
+<%--            padding: 25px;--%>
+<%--        }--%>
 
-        .textBox {width: 260px; position: relative;}
+<%--        .textBox {width: 260px; position: relative;}--%>
 
-        #border {
-            border-radius: 10px;
-            background-color: #ffffff;
-            padding: 25px;
-            text-align: center;
-            width: 300px;
+<%--        #border {--%>
+<%--            border-radius: 10px;--%>
+<%--            background-color: #ffffff;--%>
+<%--            padding: 25px;--%>
+<%--            text-align: center;--%>
+<%--            width: 300px;--%>
 
-        }
+<%--        }--%>
 
-        h1 {margin-bottom: 15px;}
+<%--        h1 {margin-bottom: 15px;}--%>
 
-        .textBox input {
-            font-family: 'Jua', sans-serif;
-            margin: 15px;
-            padding: 10px 5px 5px ;
-            border:none;
-            border-bottom: 1px solid #a0a6bb;
-            width: 100%;
-            outline: none;
-        }
+<%--        .textBox input {--%>
+<%--            font-family: 'Jua', sans-serif;--%>
+<%--            margin: 15px;--%>
+<%--            padding: 10px 5px 5px ;--%>
+<%--            border:none;--%>
+<%--            border-bottom: 1px solid #a0a6bb;--%>
+<%--            width: 100%;--%>
+<%--            outline: none;--%>
+<%--        }--%>
 
-        .textBox label {
-            position: absolute; left: 20px; top: 20px;
-            transition: all .3s ease;
-        }
+<%--        .textBox label {--%>
+<%--            position: absolute; left: 20px; top: 20px;--%>
+<%--            transition: all .3s ease;--%>
+<%--        }--%>
 
-        .textBox label.warning {
-            animation: warning .3s ease;
-            animation-iteration-count: 3;
-        }
+<%--        .textBox label.warning {--%>
+<%--            animation: warning .3s ease;--%>
+<%--            animation-iteration-count: 3;--%>
+<%--        }--%>
 
-        .textBox input:focus + label,
-        .textBox input:valid + label {
-            font-size: 12px;
-            top: 1px;
-            color: #7c8093;
-        }
+<%--        .textBox input:focus + label,--%>
+<%--        .textBox input:valid + label {--%>
+<%--            font-size: 12px;--%>
+<%--            top: 1px;--%>
+<%--            color: #7c8093;--%>
+<%--        }--%>
 
-        @keyframes warning {
-            0% {transform: translateX(-8px);}
-            25% {transform: translateX(8px);}
-            50% {transform: translateX(-8px);}
-            75% {transform: translateX(8px);}
-        }
+<%--        @keyframes warning {--%>
+<%--            0% {transform: translateX(-8px);}--%>
+<%--            25% {transform: translateX(8px);}--%>
+<%--            50% {transform: translateX(-8px);}--%>
+<%--            75% {transform: translateX(8px);}--%>
+<%--        }--%>
 
-        .gender {
-            text-align: left;
-            margin-left: 15px;
-            font-size: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
+<%--        .gender {--%>
+<%--            text-align: left;--%>
+<%--            margin-left: 15px;--%>
+<%--            font-size: 15px;--%>
+<%--            margin-top: 5px;--%>
+<%--            margin-bottom: 5px;--%>
+<%--        }--%>
 
-        .but {
-            margin-top: 30px;
-            height: 40px;
-        }
+<%--        .but {--%>
+<%--            margin-top: 30px;--%>
+<%--            height: 40px;--%>
+<%--        }--%>
 
-        #signBut {
-            width: 270px;
-            height: 40px;
-            margin-bottom: 3px;
-            border: none;
-            background-color: #a0a6bb;
-            font-family: 'Jua', sans-serif;
-            font-size: 18px;
-            color: #fff;
-            box-shadow: 2px 2px 5px #a0a6bb;
-            border-radius: 5px;
-            transition-duration: .05s;
-        }
+<%--        #signBut {--%>
+<%--            width: 270px;--%>
+<%--            height: 40px;--%>
+<%--            margin-bottom: 3px;--%>
+<%--            border: none;--%>
+<%--            background-color: #a0a6bb;--%>
+<%--            font-family: 'Jua', sans-serif;--%>
+<%--            font-size: 18px;--%>
+<%--            color: #fff;--%>
+<%--            box-shadow: 2px 2px 5px #a0a6bb;--%>
+<%--            border-radius: 5px;--%>
+<%--            transition-duration: .05s;--%>
+<%--        }--%>
 
-        #signBut:hover{background-color: #7c8093}
+<%--        #signBut:hover{background-color: #7c8093}--%>
 
-        #signBut:active{
-            margin-left: 1.5px;
-            margin-top: 1.5px;
-            box-shadow: none;
-        }
+<%--        #signBut:active{--%>
+<%--            margin-left: 1.5px;--%>
+<%--            margin-top: 1.5px;--%>
+<%--            box-shadow: none;--%>
+<%--        }--%>
 
 
     </style>

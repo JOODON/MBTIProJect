@@ -7,6 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<%request.setCharacterEncoding("UTF-8");%>
+
 <!doctype html>
 <html lang="kr">
 <head>
@@ -147,7 +149,7 @@
 
     <div id="login-form">
         <div id="login-container">
-            <form method="post" action="loginAction.jsp">
+            <form method="post" action="login">
                 <div class="textBox">
                     <label>
                         <p id="idLabel">아이디</p>
