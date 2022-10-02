@@ -6,8 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <%request.setCharacterEncoding("UTF-8");%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!doctype html>
 <html lang="kr">
@@ -16,130 +16,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="Login.css">
-
+    <link rel="stylesheet" href="">
+    <link href="${pageContext.request.contextPath}/resources/css/login.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/41cdbb121d.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-    <style>
-        *{margin: 0; padding: 0;}
-
-        html{font-size: 20px;}
-        body{font-size: 1rem;}
-
-        body {
-            font-family: 'Jua', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #3a3939;
-
-        }
-
-        section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 5px 5px 10px #a0a6bb;
-            background-color: #e9eff6;
-            border-radius: 10px;
-            width: 35rem; height: 22.5rem;
-        }
-
-        #img-form {
-            width: 16rem; height: 20rem;
-            margin: 1.25rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        #img-container h1 {margin: 100px 0}
-
-        #img-container img {width: 100%; height: 100%; float: bottom;}
-
-        #login-form {
-            background-color: #ffffff;
-            border-radius: 10px;
-            width: 16rem; height: 20rem;
-            margin: 1.25rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #login-container {width: 230px;}
-
-        .textBox {margin-bottom: 15px; font-size: 16px;}
-
-        .idBox i, .pwBox i {margin-right: 10px;}
-
-        .idBox, .pwBox {
-            width: 100%; height: 35px;
-            border: 1px solid #a0a6bb;
-            border-radius: 5px;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-        }
-
-        .textBox input {
-            width: 180px; height: 30px;
-            font-family: 'Jua', sans-serif;
-            border-radius: 5px;
-            border : none;
-            outline: none;
-        }
-
-        /*.textBox input:focus > .idBox{*/
-        /*    color: red;*/
-        /*    border: 1px solid red;*/
-        /*}*/
-
-        #but {
-            margin-top: 30px;
-            height: 50px;
-        }
-
-        #signBut {
-            font-family: 'Jua', sans-serif; font-size: 22px;
-            width: 100%; height: 45px;
-            border: none;
-            background-color: #a0a6bb; color: #fff;
-            box-shadow: 2px 2px 5px #a0a6bb;
-            border-radius: 5px;
-            transition-duration: .05s;
-            cursor: pointer;
-        }
-
-        #signBut:hover{background-color: #7c8093}
-
-        #signBut:active{
-            margin-left: 1.5px;
-            margin-top: 1.5px;
-            box-shadow: none;
-        }
-
-        #link {text-align: center}
-
-        #link a {
-            color: #3a3939;
-            font-size: 12px;
-            text-decoration: none;
-        }
-
-        #link a:hover{color: red;}
-    </style>
-
     <title>로그인</title>
 </head>
 <body>
 <section>
+    <c:if test = "${result == 1 }">
+        <h3>로그인에 실패하셨습니다</h3>
+    </c:if>
     <div id="img-form">
         <div id="img-container">
             <h1>로그인</h1>

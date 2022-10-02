@@ -77,6 +77,8 @@ public class MemberController {
 
     List<MemberDto> list = memberDao.selectAll();
 
+    int result=0;
+
     for(MemberDto memberDto: list){
       String id=memberDto.getMemberid();
       String pw=memberDto.getMemberPassword();
@@ -88,7 +90,8 @@ public class MemberController {
         return "main";
       }
       else {
-        return "login";
+        result=1;
+
       }
     }
     return "null";

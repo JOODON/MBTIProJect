@@ -7,6 +7,7 @@ import config.ApplicationConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.sql.ResultSet;
 import java.util.Date;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class TestDao {
         ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
         MemberService memberService =ac.getBean(MemberService.class);
-
+        ResultSet rs=null;
         MemberDao memberDao=ac.getBean(MemberDao.class);
 
 
