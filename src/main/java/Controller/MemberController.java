@@ -11,7 +11,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
+import java.util.List;
 
 
 @Controller
@@ -45,5 +52,52 @@ public class MemberController {
     MemberDto result=memberService.addUser(memberDto);
 
     return "login";
+  }
+  @GetMapping(path = "/login")
+  public String loginform(){
+    return "login";
+  }
+  @PostMapping(path = "/login")
+  public String login(@RequestParam(name ="memberid",required = true)String memberid,
+                      @RequestParam(name ="memberPassword",required = true)String memberPassword,
+                      ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) throws IOException {
+    HttpSession session = request.getSession();
+    //세션을 부여하기 위해서 세션객체 가져옴
+
+    request.setCharacterEncoding("UTF-8");
+
+    PrintWriter out=response.getWriter();
+    //화면에 출력해주기 위해서 가져옴
+    
+    ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+
+    MemberService memberService =ac.getBean(MemberService.class);
+
+    MemberDao memberDao=ac.getBean(MemberDao.class);
+
+    List<MemberDto> list = memberDao.selectAll();
+
+    for(MemberDto memberDto: list){
+      String id=memberDto.getMemberid();
+      String pw=memberDto.getMemberPassword();
+      System.out.print(id+"\t");
+      System.out.println(pw);
+
+      if (memberid.equals(id) && memberPassword.equals(pw)){
+        session.setAttribute("memberid",memberDto.getMemberid());
+
+        out.println("<script>alert('로그인에 성공하셨습니다.')</script>");
+
+        return "main";
+      }
+      else {
+        out.println("<script>");
+        out.println("alert('비밀번호가 틀립니다.')");
+        out.println("history.back()");
+        out.println("</script>");
+        return "login";
+      }
+    }
+    return "null";
   }
 }
