@@ -10,6 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -57,9 +58,5 @@ public class MemberController {
   public String loginform(){
     return "login";
   }
-  @ResponseBody
-  @PostMapping(path = "/login")
-  public String login(String id,String pw,HttpSession session) {
-    return null;
-  }
+
 }
