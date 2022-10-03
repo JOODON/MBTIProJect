@@ -57,43 +57,9 @@ public class MemberController {
   public String loginform(){
     return "login";
   }
+  @ResponseBody
   @PostMapping(path = "/login")
-  public String login(@RequestParam(name ="memberid",required = true)String memberid,
-                      @RequestParam(name ="memberPassword",required = true)String memberPassword,
-                      ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) throws IOException {
-    HttpSession session = request.getSession();
-    //세션을 부여하기 위해서 세션객체 가져옴
-
-    request.setCharacterEncoding("UTF-8");
-
-    PrintWriter out=response.getWriter();
-    //화면에 출력해주기 위해서 가져옴
-    
-    ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);
-
-    MemberService memberService =ac.getBean(MemberService.class);
-
-    MemberDao memberDao=ac.getBean(MemberDao.class);
-
-    List<MemberDto> list = memberDao.selectAll();
-
-    int result=0;
-
-    for(MemberDto memberDto: list){
-      String id=memberDto.getMemberid();
-      String pw=memberDto.getMemberPassword();
-      System.out.print(id+"\t");
-      System.out.println(pw);
-
-      if (memberid.equals(id) && memberPassword.equals(pw)){
-        session.setAttribute("memberid",memberDto.getMemberid());
-        return "main";
-      }
-      else {
-        result=1;
-
-      }
-    }
-    return "null";
+  public String login(String id,String pw,HttpSession session) {
+    return null;
   }
 }

@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface MemberService {
     public MemberDto addUser(MemberDto memberDto);
-    public List<MemberDto> getMembers(String id);
+
 }

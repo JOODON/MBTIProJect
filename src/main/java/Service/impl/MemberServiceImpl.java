@@ -24,9 +24,5 @@ public class MemberServiceImpl implements MemberService{
         return memberDto;
     }
 
-    @Override
-    public List<MemberDto> getMembers(String id) {
-        List<MemberDto> list=memberDao.selectAll();
-        return list;
-    }
+
 }
