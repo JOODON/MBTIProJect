@@ -7,4 +7,6 @@ import java.util.List;
 public interface MemberService {
     public MemberDto addUser(MemberDto memberDto);
 
+
+
 }
