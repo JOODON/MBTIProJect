@@ -35,6 +35,7 @@
     <div id="login-form">
         <div id="login-container">
             <form method="post" action="login">
+                <h1>로그인</h1>
                 <div class="textBox">
                     <label>
                         <p id="idLabel">아이디</p>
