@@ -57,7 +57,7 @@
             text-align: center;
         }
 
-        #img-container h1 {margin: 100px 0}
+        #img-container h1 {margin: 5rem 0}
 
         #img-container img {width: 100%; height: 100%; float: bottom;}
 
@@ -71,14 +71,20 @@
             align-items: center;
         }
 
-        #login-container {width: 230px;}
+        #login-container {width: 11.5rem;}
 
-        .textBox {margin-bottom: 15px; font-size: 16px;}
+        #login-container h1 {
+            display: none;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .textBox {margin-bottom: 0.75rem; font-size: 0.8rem;}
 
         .idBox i, .pwBox i {margin-right: 10px;}
 
         .idBox, .pwBox {
-            width: 100%; height: 35px;
+            width: 100%; height: 1.75rem;
             border: 1px solid #a0a6bb;
             border-radius: 5px;
             justify-content: center;
@@ -87,26 +93,21 @@
         }
 
         .textBox input {
-            width: 180px; height: 30px;
+            width: 9rem; height: 1.5rem;
             font-family: 'Jua', sans-serif;
             border-radius: 5px;
             border : none;
             outline: none;
         }
 
-        /*.textBox input:focus > .idBox{*/
-        /*    color: red;*/
-        /*    border: 1px solid red;*/
-        /*}*/
-
         #but {
-            margin-top: 30px;
-            height: 50px;
+            margin-top: 1.5rem;
+            height: 2.5rem;
         }
 
         #signBut {
-            font-family: 'Jua', sans-serif; font-size: 22px;
-            width: 100%; height: 45px;
+            font-family: 'Jua', sans-serif; font-size: 1.1rem;
+            width: 100%; height: 2.25rem;
             border: none;
             background-color: #a0a6bb; color: #fff;
             box-shadow: 2px 2px 5px #a0a6bb;
@@ -127,11 +128,20 @@
 
         #link a {
             color: #3a3939;
-            font-size: 12px;
+            font-size: 0.6rem;
             text-decoration: none;
         }
 
         #link a:hover{color: red;}
+
+        @media screen and (max-width: 768px) {
+            #img-form { display: none;}
+            section {width: 18rem;}
+            #login-container h1 {
+                display: block;
+            }
+        }
+
     </style>
 
     <title>로그인</title>
@@ -148,6 +158,7 @@
     <div id="login-form">
         <div id="login-container">
             <form method="post" action="loginAction.jsp">
+                <h1>로그인</h1>
                 <div class="textBox">
                     <label>
                         <p id="idLabel">아이디</p>
