@@ -39,4 +39,6 @@ public class MemberDao {
         SqlParameterSource params=new BeanPropertySqlParameterSource(dto);
         return insertAction.executeAndReturnKey(params).intValue();
     }
+
+
 }

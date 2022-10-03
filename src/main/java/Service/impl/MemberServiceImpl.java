@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
+
 @Service
 public class MemberServiceImpl implements MemberService{
     @Autowired
@@ -21,4 +23,8 @@ public class MemberServiceImpl implements MemberService{
 
         return memberDto;
     }
+
+
+
+
 }
