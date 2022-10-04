@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%request.setCharacterEncoding("UTF-8");%>
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!doctype html>
@@ -70,7 +69,10 @@
     </div>
     </div>
 </section>
-
-
+<c:if test="${check == 1}">
+<script>
+    alert("아이디와 비밀번호를 확인해주세요.");
+</script>
+</c:if>
 </body>
 </html>

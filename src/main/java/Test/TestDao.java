@@ -19,32 +19,9 @@ public class TestDao {
 
         MemberDao memberDao=ac.getBean(MemberDao.class);
 
-        List<MemberDto> list = memberDao.selectAll();
+        MemberDto memberDto=new MemberDto();
 
-        for(MemberDto memberDto: list) {
-            String id = memberDto.getMemberid();
-            String pw = memberDto.getMemberPassword();
-            System.out.print(id + "\t");
-            System.out.println(pw);
-            String inid="admin";
-            String inpw="kkjjss103@";
+        List<MemberDto> list=memberDao.selectAll();
 
-            if (id.equals(inid) && pw.equals(inpw)) {
-                System.out.println("로그인 성공");
-                break;
-            }
-            else if (id.equals(inid) && !pw.equals(inpw)){
-                System.out.println("로그인 실패 사유 비밀번호 다름");
-            }
-            else if (!id.equals(inid) && pw.equals(inpw)){
-                System.out.println("로그인 실패 사유 아이디 다름");
-            }
-            else {
-                System.out.println("로그인에 실패하셨습니다");
-            }
         }
-
-
-
     }
-}

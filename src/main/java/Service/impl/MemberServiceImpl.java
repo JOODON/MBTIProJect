@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.ResultSet;
 import java.util.Date;
 import java.util.List;
 
@@ -24,7 +25,10 @@ public class MemberServiceImpl implements MemberService{
         return memberDto;
     }
 
-
+    @Override
+    public MemberDto loginUser(MemberDto memberDto) {
+        return memberDao.loginUser(memberDto);
+    }
 
 
 }

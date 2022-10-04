@@ -32,15 +32,7 @@ section {
     text-align: center;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #img-container h1 {margin: 5rem 0}
-=======
-#img-container h1 {margin: 100px 0}
->>>>>>> Stashed changes
-=======
-#img-container h1 {margin: 100px 0}
->>>>>>> Stashed changes
 
 #img-container img {width: 100%; height: 100%; float: bottom;}
 
@@ -54,8 +46,6 @@ section {
     align-items: center;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #login-container {width: 11.5rem;}
 
 #login-container h1 {
@@ -65,29 +55,11 @@ section {
 }
 
 .textBox {margin-bottom: 0.75rem; font-size: 0.8rem;}
-=======
-#login-container {width: 230px;}
-
-.textBox {margin-bottom: 15px; font-size: 16px;}
->>>>>>> Stashed changes
-=======
-#login-container {width: 230px;}
-
-.textBox {margin-bottom: 15px; font-size: 16px;}
->>>>>>> Stashed changes
 
 .idBox i, .pwBox i {margin-right: 10px;}
 
 .idBox, .pwBox {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     width: 100%; height: 1.75rem;
-=======
-    width: 100%; height: 35px;
->>>>>>> Stashed changes
-=======
-    width: 100%; height: 35px;
->>>>>>> Stashed changes
     border: 1px solid #a0a6bb;
     border-radius: 5px;
     justify-content: center;
@@ -96,23 +68,13 @@ section {
 }
 
 .textBox input {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     width: 9rem; height: 1.5rem;
-=======
-    width: 180px; height: 30px;
->>>>>>> Stashed changes
-=======
-    width: 180px; height: 30px;
->>>>>>> Stashed changes
     font-family: 'Jua', sans-serif;
     border-radius: 5px;
     border : none;
     outline: none;
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 #but {
     margin-top: 1.5rem;
     height: 2.5rem;
@@ -121,26 +83,6 @@ section {
 #signBut {
     font-family: 'Jua', sans-serif; font-size: 1.1rem;
     width: 100%; height: 2.25rem;
-=======
-=======
->>>>>>> Stashed changes
-/*.textBox input:focus > .idBox{*/
-/*    color: red;*/
-/*    border: 1px solid red;*/
-/*}*/
-
-#but {
-    margin-top: 30px;
-    height: 50px;
-}
-
-#signBut {
-    font-family: 'Jua', sans-serif; font-size: 22px;
-    width: 100%; height: 45px;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     border: none;
     background-color: #a0a6bb; color: #fff;
     box-shadow: 2px 2px 5px #a0a6bb;
@@ -161,21 +103,11 @@ section {
 
 #link a {
     color: #3a3939;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     font-size: 0.6rem;
-=======
-    font-size: 12px;
->>>>>>> Stashed changes
-=======
-    font-size: 12px;
->>>>>>> Stashed changes
     text-decoration: none;
 }
 
 #link a:hover{color: red;}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 
 @media screen and (max-width: 768px) {
     #img-form { display: none;}
@@ -184,7 +116,3 @@ section {
         display: block;
     }
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes

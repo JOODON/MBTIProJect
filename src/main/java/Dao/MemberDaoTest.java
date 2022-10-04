@@ -15,11 +15,7 @@ public class MemberDaoTest {
 
         List<MemberDto> list = memberDao.selectAll();
 
-        for(MemberDto memberDto: list){
-            String id=memberDto.getMemberid();
-            String pw=memberDto.getMemberPassword();
-            System.out.print(id+"\t");
-            System.out.println(pw);
-        }
+        System.out.println(list);
+
     }
 }
