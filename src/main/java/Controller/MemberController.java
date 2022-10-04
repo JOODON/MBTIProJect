@@ -1,6 +1,7 @@
 package Controller;
 
 
+import Dao.MemberDao;
 import Dto.MemberDto;
 import Service.MemberService;
 import config.ApplicationConfig;
@@ -10,10 +11,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 @Controller
 public class MemberController {
@@ -51,7 +55,17 @@ public class MemberController {
     public String loginform(){
         return "login";
     }
+    @PostMapping(path = "/login")
+    public String  loginAction(
+            @RequestParam(name ="memberid",required = true)String memberid,
+            @RequestParam(name ="memberPassword",required = true)String memberPassword, ModelMap modelMap
+                        ,HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 
+<<<<<<< Updated upstream
 
+=======
+    
+    }
+>>>>>>> Stashed changes
 }

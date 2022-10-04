@@ -33,7 +33,11 @@ section {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #img-container h1 {margin: 5rem 0}
+=======
+#img-container h1 {margin: 100px 0}
+>>>>>>> Stashed changes
 =======
 #img-container h1 {margin: 100px 0}
 >>>>>>> Stashed changes
@@ -51,6 +55,7 @@ section {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #login-container {width: 11.5rem;}
 
 #login-container h1 {
@@ -65,12 +70,21 @@ section {
 
 .textBox {margin-bottom: 15px; font-size: 16px;}
 >>>>>>> Stashed changes
+=======
+#login-container {width: 230px;}
+
+.textBox {margin-bottom: 15px; font-size: 16px;}
+>>>>>>> Stashed changes
 
 .idBox i, .pwBox i {margin-right: 10px;}
 
 .idBox, .pwBox {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     width: 100%; height: 1.75rem;
+=======
+    width: 100%; height: 35px;
+>>>>>>> Stashed changes
 =======
     width: 100%; height: 35px;
 >>>>>>> Stashed changes
@@ -83,7 +97,11 @@ section {
 
 .textBox input {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     width: 9rem; height: 1.5rem;
+=======
+    width: 180px; height: 30px;
+>>>>>>> Stashed changes
 =======
     width: 180px; height: 30px;
 >>>>>>> Stashed changes
@@ -94,6 +112,7 @@ section {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #but {
     margin-top: 1.5rem;
     height: 2.5rem;
@@ -103,6 +122,8 @@ section {
     font-family: 'Jua', sans-serif; font-size: 1.1rem;
     width: 100%; height: 2.25rem;
 =======
+=======
+>>>>>>> Stashed changes
 /*.textBox input:focus > .idBox{*/
 /*    color: red;*/
 /*    border: 1px solid red;*/
@@ -116,6 +137,9 @@ section {
 #signBut {
     font-family: 'Jua', sans-serif; font-size: 22px;
     width: 100%; height: 45px;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     border: none;
     background-color: #a0a6bb; color: #fff;
@@ -138,7 +162,11 @@ section {
 #link a {
     color: #3a3939;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     font-size: 0.6rem;
+=======
+    font-size: 12px;
+>>>>>>> Stashed changes
 =======
     font-size: 12px;
 >>>>>>> Stashed changes
@@ -146,6 +174,7 @@ section {
 }
 
 #link a:hover{color: red;}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
 @media screen and (max-width: 768px) {
@@ -155,5 +184,7 @@ section {
         display: block;
     }
 }
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
