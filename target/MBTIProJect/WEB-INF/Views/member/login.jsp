@@ -35,7 +35,10 @@
     <div id="login-form">
         <div id="login-container">
             <form method="post" action="login">
+<<<<<<< Updated upstream
                 <h1>로그인</h1>
+=======
+>>>>>>> Stashed changes
                 <div class="textBox">
                     <label>
                         <p id="idLabel">아이디</p>
