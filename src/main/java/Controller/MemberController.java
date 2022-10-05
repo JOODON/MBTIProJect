@@ -17,11 +17,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+<<<<<<< Updated upstream
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 import java.util.Locale;
+=======
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+>>>>>>> Stashed changes
 
 @Controller
 public class MemberController {
@@ -62,6 +68,7 @@ public class MemberController {
         return "login";
     }
     @PostMapping(path = "/login")
+<<<<<<< Updated upstream
     public String login(MemberDto memberDto,Model model){
         MemberDto loginUser=memberService.loginUser(memberDto);
 
@@ -74,5 +81,14 @@ public class MemberController {
             model.addAttribute("loginUser",loginUser);
             return "main";
         }
+=======
+    public String  loginAction(
+            @RequestParam(name ="memberid",required = true)String memberid,
+            @RequestParam(name ="memberPassword",required = true)String memberPassword, ModelMap modelMap
+                        ,HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+
+    
+>>>>>>> Stashed changes
     }
 }
