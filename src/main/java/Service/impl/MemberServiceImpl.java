@@ -24,10 +24,9 @@ public class MemberServiceImpl implements MemberService{
 
         return memberDto;
     }
-
     @Override
-    public MemberDto loginUser(MemberDto memberDto) {
-        return memberDao.loginUser(memberDto);
+    public MemberDto login(MemberDto memberDto) throws Exception {
+        return memberDao.login(memberDto);
     }
 
 

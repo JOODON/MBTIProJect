@@ -2,8 +2,6 @@ package Dto;
 
 import java.util.Date;
 
-
-
 public class MemberDto {
     private int id;
     private String memberName;

@@ -45,5 +45,7 @@ public class MemberDao {
         System.out.println("My Natis로 로그인기능 처리");
         return mybatis.selectOne("MemberDao.loginUser",memberDto);
     }
-
+    public MemberDto login(MemberDto dto) throws Exception {
+        return mybatis.selectOne("MemberMapper.login",dto);
+    }
 }

@@ -7,6 +7,6 @@ import java.util.List;
 public interface MemberService {
     public MemberDto addUser(MemberDto memberDto);
 
-    public MemberDto loginUser(MemberDto memberDto);
+    public MemberDto login(MemberDto memberDto) throws Exception;
 
 }
