@@ -20,11 +20,10 @@ import static Dao.MemberDaoSqls.*;
 @Repository
 public class MemberDao {
     private NamedParameterJdbcTemplate jdbc;
-
     private SimpleJdbcInsert insertAction;
     private RowMapper<MemberDto> rowMapper = BeanPropertyRowMapper.newInstance(MemberDto.class);
-
-    private SqlSessionTemplate mybatis;
+    @Autowired
+    SqlSessionTemplate mybatis;
 
     public MemberDao(DataSource dataSource){
         this.jdbc=new NamedParameterJdbcTemplate(dataSource);
@@ -41,11 +40,7 @@ public class MemberDao {
         SqlParameterSource params=new BeanPropertySqlParameterSource(dto);
         return insertAction.executeAndReturnKey(params).intValue();
     }
-    public MemberDto loginUser(MemberDto memberDto){
-        System.out.println("My Natis로 로그인기능 처리");
-        return mybatis.selectOne("MemberDao.loginUser",memberDto);
-    }
     public MemberDto login(MemberDto dto) throws Exception {
-        return mybatis.selectOne("MemberMapper.login",dto);
+        return mybatis.selectOne("mybatis/mappers/memberMapper.login",dto);
     }
 }
