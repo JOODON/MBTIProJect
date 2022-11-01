@@ -41,6 +41,6 @@ public class MemberDao {
         return insertAction.executeAndReturnKey(params).intValue();
     }
     public MemberDto login(MemberDto dto) throws Exception {
-        return mybatis.selectOne("mybatis/mappers/memberMapper.login",dto);
+        return mybatis.selectOne("memberMapper.login",dto);
     }
 }
