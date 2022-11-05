@@ -19,6 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+<<<<<<< Updated upstream
 
 <<<<<<< Updated upstream
 import javax.servlet.http.HttpSession;
@@ -30,6 +31,8 @@ import java.util.Locale;
 =======
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -75,6 +78,7 @@ public class MemberController {
     }
     @PostMapping(path = "/login")
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     public String login(MemberDto dto, HttpServletRequest request, RedirectAttributes rttr)throws Exception{
         HttpSession session=request.getSession();
         MemberDto login=memberService.login(dto);
@@ -88,6 +92,8 @@ public class MemberController {
             return "login";
         }
 =======
+=======
+>>>>>>> Stashed changes
     public String  loginAction(
             @RequestParam(name ="memberid",required = true)String memberid,
             @RequestParam(name ="memberPassword",required = true)String memberPassword, ModelMap modelMap
@@ -95,6 +101,9 @@ public class MemberController {
 
 
     
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }
